@@ -3,15 +3,7 @@ import PropTypes from "prop-types";
 const BorderRadiusCard = ({ children, className = "", ...props }) => {
   return (
     <div
-      className={`
-        overflow-hidden
-        w-full h-fit
-        rounded-tr-[120px]
-        rounded-tl-[20px]
-        rounded-bl-[120px]
-        rounded-br-[20px]
-        ${className}
-      `}
+      className={`overflow-hidden w-full h-fit rounded-tr-[120px] rounded-tl-[20px] rounded-bl-[120px] rounded-br-[20px] ${className}`}
       {...props}
     >
       {children}

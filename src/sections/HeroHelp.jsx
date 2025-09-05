@@ -3,7 +3,7 @@ import Avatar from "../components/Avatar";
 import BoxesSvg from "../assets/designs/boxes.svg";
 import Button from "../components/Button";
 import HappyPeople from "../assets/designs/happy.png";
-import Eclispse from "../components/Eclipse";
+import Eclipse from "../components/Eclipse";
 import TitleText from "../components/TitleText";
 import LargeTitleText from "../components/LargeTitleText";
 import RegularText from "../components/RegularText";
@@ -51,7 +51,7 @@ const HeroHelp = () => {
               }}
             ></div>
 
-            <Eclispse />
+            <Eclipse />
           </div>
         </div>
 

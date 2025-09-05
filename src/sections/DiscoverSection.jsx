@@ -5,8 +5,7 @@ import TitleText from "../components/TitleText";
 import LargeTitleText from "../components/LargeTitleText";
 import RegularText from "../components/RegularText";
 import MediumText from "../components/MediumText";
-
-const defaultImg = "/images/image1.jpg";
+import Eclipse from "../components/Eclipse";
 
 const offer = [
   {
@@ -56,12 +55,12 @@ const whyDifferentCards = [
 ];
 
 const DiscoverSection = () => (
-  <section className="w-full bg-white py-16">
-    <div className="p-4 md:p-8 relative">
+  <section className="w-full bg-white z-10 relative py-16">
+    <div className="p-4 md:p-8">
       {/* WHAT WE OFFER */}
 
       <BorderRadiusCard
-        className="bg-light-gray border px-10 py-20"
+        className="bg-light-gray z-10 border px-10 py-20"
         style={{
           borderStyle: "dashed",
           borderWidth: "2px",
@@ -246,6 +245,16 @@ const DiscoverSection = () => (
           ))}
         </div>
       </BorderRadiusCard>
+
+      <div className="absolute z-[-1] top-[1100px] md:top-[700px] lg:top-[500px] w-[500px] flex justify-end h-[500px] right-0">
+        <Eclipse />
+      </div>
+
+      <div className="absolute z-[-1] bottom-[1300px] md:bottom-[1300px] lg:bottom-[500px] left-0 w-[500px] flex justify-start h-[500px]">
+        <Eclipse className="rotate-90" />
+      </div>
+
+      <div className="bg-light-gray absolute right-0 bottom-0 z-[-1] h-[700px] lg:h-[450px] w-full"></div>
     </div>
   </section>
 );
