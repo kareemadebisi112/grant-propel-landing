@@ -3,6 +3,10 @@ import Avatar from "../components/Avatar";
 import BoxesSvg from "../assets/designs/boxes.svg";
 import Button from "../components/Button";
 import HappyPeople from "../assets/designs/happy.png";
+import Eclispse from "../components/Eclipse";
+import TitleText from "../components/TitleText";
+import LargeTitleText from "../components/LargeTitleText";
+import RegularText from "../components/RegularText";
 
 const HeroHelp = () => {
   return (
@@ -30,16 +34,24 @@ const HeroHelp = () => {
         {/* Center circle with gradient and dashed border (responsive) */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[500px] h-[500px] lg:w-[600px] lg:h-[600px]">
           <div className="relative w-full h-full rounded-full flex items-center justify-center">
-            <div className="absolute rounded-full h-full w-full border border-dashed border-light-green opacity-10"></div>
-            <div className="absolute rounded-full h-11/12 w-11/12 border border-dashed border-light-green opacity-40"></div>
-
             <div
-              className="rounded-full w-10/12 h-10/12"
+              className="absolute rounded-full h-full w-full border border-dashed border-light-green opacity-10"
               style={{
-                background:
-                  "linear-gradient(209.96deg, rgba(0, 206, 103, 0.2) 13.02%, rgba(0, 206, 103, 0) 34.75%, rgba(0, 206, 103, 0) 58.59%, rgba(0, 206, 103, 0.2) 86.61%)",
+                borderStyle: "dashed",
+                borderWidth: "2px",
+                borderColor: "#00CE67",
               }}
             ></div>
+            <div
+              className="absolute rounded-full h-11/12 w-11/12 border border-dashed border-light-green opacity-40"
+              style={{
+                borderStyle: "dashed",
+                borderWidth: "2px",
+                borderColor: "#00CE67",
+              }}
+            ></div>
+
+            <Eclispse />
           </div>
         </div>
 
@@ -91,25 +103,23 @@ const HeroHelp = () => {
         <div className="mx-auto px-4 md:px-20">
           <div className="grid md:grid-cols-2 gap-12 relative items-center">
             {/* Left Column */}
-            <div className="space-y-6">
-              <span className="text-light-green font-medium">HOW WE HELP</span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-green">
-                Searching Shouldn't Slow You Down
-              </h2>
-              <p className="text-text-green-fade text-lg">
+            <div className=" flex flex-col space-y-4">
+              <TitleText>HOW WE HELP</TitleText>
+              <LargeTitleText>Searching Shouldn't Slow You Down</LargeTitleText>
+              <RegularText>
                 Finding the right grant shouldn't feel like chasing shadows.
                 With so many deadlines, fine print, and scattered sources, it's
                 easy to feel like the system's working against you — especially
                 when you're already managing the responsibilities that move your
                 mission forward.
-              </p>
-              <p className="text-text-green font-semibold">
+              </RegularText>
+              <RegularText className="text-text-green italic font-semibold">
                 We're here to fix that.
-              </p>
-              <p className="text-text-green-fade text-lg">
+              </RegularText>
+              <RegularText>
                 Grant Propel brings clarity, focus, and momentum to your search
                 — so you spend less time looking and more time moving forward.
-              </p>
+              </RegularText>
             </div>
 
             {/* Right Column */}

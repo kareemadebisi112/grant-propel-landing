@@ -1,248 +1,251 @@
 import Button from "../components/Button";
 import Avatar from "../components/Avatar";
 import BorderRadiusCard from "../components/BorderRadiusCard";
+import TitleText from "../components/TitleText";
+import LargeTitleText from "../components/LargeTitleText";
+import RegularText from "../components/RegularText";
+import MediumText from "../components/MediumText";
 
 const defaultImg = "/images/image1.jpg";
 
+const offer = [
+  {
+    image: "/icons/icon1.svg",
+    description:
+      "Match you with curated opportunities based on your sector, size, and eligibility.",
+  },
+  {
+    image: "/icons/icon2.svg",
+    description:
+      "Send you reminders before deadlines hit so you never miss out.",
+  },
+  {
+    image: "/icons/icon3.svg",
+    description:
+      "Keep you updated with fresh leads, insights, and helpful guidance.",
+  },
+  {
+    image: "/icons/icon4.svg",
+    description: "Let you save and organize your favorites with ease.",
+  },
+];
+
+const whyDifferentCards = [
+  {
+    icon: "/icons/icon9.svg",
+    iconAlt: "human-icon",
+    title: "Human-Centered",
+    description:
+      "Clear language, helpful filters, and support that meets you where you are.",
+  },
+  {
+    icon: "/icons/icon10.svg",
+    iconAlt: "always-evolving-icon",
+    title: "Always Evolving",
+    description:
+      "We add new opportunities weekly — and we actually explain them.",
+    cardClass:
+      "p-5 border-3 border-dashed border-white/5 rounded-2xl flex flex-col items-center",
+  },
+  {
+    icon: "/icons/icon11.svg",
+    iconAlt: "values-driven-icon",
+    title: "Values-Driven",
+    description: "We prioritize access, clarity, and inclusion at every step.",
+  },
+];
+
 const DiscoverSection = () => (
-  <section className="w-full bg-white py-16 px-4 md:px-8">
-    <div className="p-8 md:p-12 relative">
+  <section className="w-full bg-white py-16">
+    <div className="p-4 md:p-8 relative">
       {/* WHAT WE OFFER */}
 
-      <BorderRadiusCard>
+      <BorderRadiusCard
+        className="bg-light-gray border px-10 py-20"
+        style={{
+          borderStyle: "dashed",
+          borderWidth: "2px",
+          borderColor: "#003A2F",
+        }}
+      >
+        <div className="flex flex-col">
+          <div className=" flex flex-col space-y-4 items-center text-center">
+            <TitleText>WHAT WE OFFER</TitleText>
 
+            <LargeTitleText>A Smarter Way to Discover Funding</LargeTitleText>
+
+            <RegularText>We don't just list grants. We:</RegularText>
+          </div>
+
+          <div className="grid grid-cols-1 md:mt-10 md:grid-cols-2 gap-3 lg:gap-0 lg:grid-cols-4 mb-16">
+            {offer.map((item, index) => {
+              let borderClass = "p-6 flex flex-col items-start text-start";
+              // 1 column: border-bottom except last
+              if (index !== offer.length - 1) {
+                borderClass += " border-b border-border-gray";
+              }
+              // 2 columns: only first two get md:border-b
+              if (index < offer.length - 2) {
+                borderClass += " md:border-b md:border-border-gray";
+              } else {
+                borderClass += " md:border-b-0";
+              }
+              // Remove bottom border for all items at lg breakpoint
+              borderClass += " lg:border-b-0";
+              // 4 columns: border-right except last one
+              if (index !== offer.length - 1) {
+                borderClass += " lg:border-r lg:border-border-gray";
+              }
+              return (
+                <div key={index} className={borderClass}>
+                  <div className="w-[75px] h-[75px] mb-4">
+                    <img
+                      src={item.image}
+                      alt={`Icon ${index + 1}`}
+                      className="w-full h-full"
+                    />
+                  </div>
+                  <p className="text-dark-green text-xl font-medium font-poppins">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </BorderRadiusCard>
-      <div className="text-center mb-12">
-        <span className="text-light-green text-sm font-semibold tracking-wide uppercase">
-          WHAT WE OFFER
-        </span>
-        <h2 className="text-3xl md:text-4xl font-bold text-dark-green mt-2 mb-4">
-          A Smarter Way to Discover Funding
-        </h2>
-        <p className="text-text-green-fade text-lg max-w-2xl mx-auto">
-          We don't just list grants. We:
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-        <div className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center text-center">
-          <div className="w-[75px] h-[75px] mb-4">
-            <img
-              src="/icons/icon1.svg"
-              alt="Match Icon"
-              className="w-full h-full"
-            />
-          </div>
-          <h4 className="font-semibold text-dark-green text-xl mb-3">Match</h4>
-          <p className="text-text-green-fade">
-            Match you with curated opportunities based on your sector, size, and
-            eligibility.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center text-center">
-          <div className="w-[75px] h-[75px] mb-4">
-            <img
-              src="/icons/icon2.svg"
-              alt="Remind Icon"
-              className="w-full h-full"
-            />
-          </div>
-          <h4 className="font-semibold text-dark-green text-xl mb-3">Remind</h4>
-          <p className="text-text-green-fade">
-            Send you reminders before deadlines hit so you never miss out.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center text-center">
-          <div className="w-[75px] h-[75px] mb-4">
-            <img
-              src="/icons/icon3.svg"
-              alt="Update Icon"
-              className="w-full h-full"
-            />
-          </div>
-          <h4 className="font-semibold text-dark-green text-xl mb-3">Update</h4>
-          <p className="text-text-green-fade">
-            Keep you updated with fresh leads, insights, and helpful guidance.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center text-center">
-          <div className="w-[75px] h-[75px] mb-4">
-            <img
-              src="/icons/icon4.svg"
-              alt="Organize Icon"
-              className="w-full h-full"
-            />
-          </div>
-          <h4 className="font-semibold text-dark-green text-xl mb-3">
-            Organize
-          </h4>
-          <p className="text-text-green-fade">
-            Let you save and organize your favorites with ease.
-          </p>
-        </div>
-      </div>
 
       {/* WHO IT'S FOR */}
-      <div className="mb-16">
-        <div className="text-center mb-10">
-          <span className="text-light-green text-sm font-semibold tracking-wide uppercase">
-            WHO IT'S FOR
-          </span>
-          <h3 className="text-3xl md:text-4xl font-bold text-dark-green mt-2 mb-4">
-            Built for Builders
-          </h3>
-          <p className="text-text-green-fade text-lg max-w-2xl mx-auto mb-8">
-            Whether you're growing a movement, launching a project, or funding
-            your education — Grant Propel is made for you.
-          </p>
+      <div className="py-20 px-4 md:px-10 lg:px-20">
+        <div className="flex">
+          <div className="text-start flex space-y-4 flex-col mb-10">
+            <TitleText>WHO IT'S FOR</TitleText>
+            <LargeTitleText>Built for Builders</LargeTitleText>
+            <RegularText className="max-w-xl">
+              Whether you're growing a movement, launching a project, or funding
+              your education — Grant Propel is made for you.
+            </RegularText>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Students */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img
-              src={defaultImg}
-              alt="Students"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="font-bold text-dark-green text-xl">Students</h4>
-                <span className="bg-light-green text-white rounded-full p-2">
-                  🎓
-                </span>
-              </div>
-              <p className="text-text-green-fade">
-                Find scholarships and fellowships that actually apply to you.
-              </p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 space-y-10 mt-4 md:grid-cols-2 gap-8">
+          {[
+            {
+              image: "/images/image1.jpg",
+              icon: "/icons/icon5.svg",
+              title: "Students",
+              description:
+                "Find scholarships and fellowships that actually apply to you.",
+              iconAlt: "Students",
+            },
+            {
+              image: "/images/image2.jpg",
+              icon: "/icons/icon6.svg",
+              title: "Researchers",
+              description:
+                "Fuel your breakthroughs without wasting hours digging.",
+              iconAlt: "Researchers",
+            },
+            {
+              image: "/images/image3.jpg",
+              icon: "/icons/icon7.svg",
+              title: "Nonprofits",
+              description:
+                "Power your programs with funding that aligns with your mission.",
+              iconAlt: "Nonprofits",
+            },
+            {
+              image: "/images/image4.jpg",
+              icon: "/icons/icon8.svg",
+              title: "Small Businesses",
+              description:
+                "Discover grants to grow your business, your team, or your impact.",
+              iconAlt: "Small Businesses",
+            },
+          ].map((card, idx) => (
+            <div key={card.title} className="h-fit overflow-hidden relative">
+              <div className="relative aspect-[592/287]">
+                <svg
+                  viewBox="0 0 592 287"
+                  className="w-full h-full"
+                  style={{ display: "block" }}
+                >
+                  <defs>
+                    <clipPath
+                      id={`curve-clip-${idx}`}
+                      clipPathUnits="userSpaceOnUse"
+                    >
+                      <path d="M572 0C583.046 0 592 8.95431 592 20V181.06C592 192.105 583.046 201.06 572 201.06H530C518.954 201.06 510 210.014 510 221.06V267C510 278.046 501.046 287 490 287H20C8.95431 287 0 278.046 0 267V20C1.03081e-06 8.95431 8.95431 3.09264e-06 20 0H572Z" />
+                    </clipPath>
+                  </defs>
+                  <image
+                    href={card.image}
+                    width="592"
+                    height="287"
+                    clipPath={`url(#curve-clip-${idx})`}
+                    preserveAspectRatio="none"
+                  />
+                </svg>
 
-          {/* Researchers */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img
-              src={defaultImg}
-              alt="Researchers"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="font-bold text-dark-green text-xl">
-                  Researchers
-                </h4>
-                <span className="bg-light-green text-white rounded-full p-2">
-                  🔬
-                </span>
+                <img
+                  src={card.icon}
+                  alt={card.iconAlt}
+                  className="lg:w-16 lg:h-16 w-10 h-10 absolute right-0 bottom-0 z-40 object-cover"
+                />
               </div>
-              <p className="text-text-green-fade">
-                Fuel your breakthroughs without wasting hours digging.
-              </p>
-            </div>
-          </div>
-
-          {/* Nonprofits */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img
-              src={defaultImg}
-              alt="Nonprofits"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="font-bold text-dark-green text-xl">
-                  Nonprofits
-                </h4>
-                <span className="bg-light-green text-white rounded-full p-2">
-                  🤝
-                </span>
+              <div className="mt-4 flex flex-col">
+                <MediumText>{card.title}</MediumText>
+                <RegularText className="max-w-[397px]">
+                  {card.description}
+                </RegularText>
               </div>
-              <p className="text-text-green-fade">
-                Power your programs with funding that aligns with your mission.
-              </p>
             </div>
-          </div>
-
-          {/* Small Businesses */}
-          <div className="bg-white rounded-2xl shadow-md overflow-hidden">
-            <img
-              src={defaultImg}
-              alt="Small Businesses"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <div className="flex items-center justify-between mb-3">
-                <h4 className="font-bold text-dark-green text-xl">
-                  Small Businesses
-                </h4>
-                <span className="bg-light-green text-white rounded-full p-2">
-                  💼
-                </span>
-              </div>
-              <p className="text-text-green-fade">
-                Discover grants to grow your business, your team, or your
-                impact.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* WHY WE'RE DIFFERENT */}
-      <div className="bg-dark-green rounded-3xl p-8 md:p-12 text-white">
-        <div className="text-center mb-10">
-          <span className="text-light-green text-sm font-semibold tracking-wide uppercase">
-            WHY WE'RE DIFFERENT
-          </span>
-          <h3 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+      <BorderRadiusCard className=" bg-mid-green px-2 md:px-5 lg:px-10 py-20 ">
+        <div className="text-center flex space-y-4 flex-col mb-10">
+          <TitleText>WHY WE'RE DIFFERENT</TitleText>
+
+          <LargeTitleText className="text-white">
             More Than a Database. A Partner.
-          </h3>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          </LargeTitleText>
+
+          <RegularText className="text-white">
             Other tools hand you a search bar and wish you luck. We're
             different:
-          </p>
+          </RegularText>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-[#0B2B23] rounded-2xl p-8 flex flex-col items-center text-center">
-            <div className="bg-[#1A3F37] w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <span className="text-3xl">🤲</span>
+        <div className="grid px-2 md:px-5 lg:px-10  grid-cols-1 lg:grid-cols-3 gap-6">
+          {whyDifferentCards.map((item, idx) => (
+            <div
+              key={idx}
+              className={
+                idx === 1
+                  ? "p-5 border-3 border-dashed border-white/5 rounded-2xl flex flex-col items-center"
+                  : "p-5 rounded-2xl flex flex-col items-center"
+              }
+            >
+              <div className="bg-white/5 min-h-[300px] w-full rounded-2xl p-8 flex flex-col items-start text-start">
+                <img
+                  src={item.icon}
+                  alt={item.iconAlt}
+                  className="w-16 h-16 object-cover"
+                />
+                <MediumText className="text-[22px] mt-7 text-white">
+                  {item.title}
+                </MediumText>
+                <RegularText className="mt-2 text-white">
+                  {item.description}
+                </RegularText>
+              </div>
             </div>
-            <h4 className="font-bold text-xl mb-4">Human-Centered</h4>
-            <p className="text-gray-300">
-              Clear language, helpful filters, and support that meets you where
-              you are.
-            </p>
-          </div>
-
-          <div className="bg-[#0B2B23] rounded-2xl p-8 flex flex-col items-center text-center border-2 border-dashed border-light-green relative">
-            <div className="absolute -top-3 right-6 bg-light-green text-dark-green text-xs font-bold px-3 py-1 rounded-full">
-              Featured
-            </div>
-            <div className="bg-[#1A3F37] w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <span className="text-3xl">🔄</span>
-            </div>
-            <h4 className="font-bold text-xl mb-4">Always Evolving</h4>
-            <p className="text-gray-300">
-              We add new opportunities weekly — and we actually explain them.
-            </p>
-          </div>
-
-          <div className="bg-[#0B2B23] rounded-2xl p-8 flex flex-col items-center text-center">
-            <div className="bg-[#1A3F37] w-16 h-16 rounded-full flex items-center justify-center mb-6">
-              <span className="text-3xl">🌱</span>
-            </div>
-            <h4 className="font-bold text-xl mb-4">Values-Driven</h4>
-            <p className="text-gray-300">
-              We prioritize access, clarity, and inclusion at every step.
-            </p>
-          </div>
+          ))}
         </div>
-
- 
-      </div>
+      </BorderRadiusCard>
     </div>
   </section>
 );

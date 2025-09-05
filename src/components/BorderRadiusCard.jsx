@@ -6,11 +6,10 @@ const BorderRadiusCard = ({ children, className = "", ...props }) => {
       className={`
         overflow-hidden
         w-full h-fit
-        bg-white
-        rounded-tl-[120px]
-        rounded-tr-[20px]
-        rounded-br-[120px]
-        rounded-bl-[20px]
+        rounded-tr-[120px]
+        rounded-tl-[20px]
+        rounded-bl-[120px]
+        rounded-br-[20px]
         ${className}
       `}
       {...props}
