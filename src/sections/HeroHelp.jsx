@@ -11,7 +11,7 @@ import RegularText from "../components/RegularText";
 const HeroHelp = () => {
   return (
     <div className="w-full relative">
-      <section className="relative w-full h-svh flex  bg-dark-green overflow-hidden">
+      <section className="relative w-full h-[900px] flex bg-dark-green overflow-hidden">
         <div className="absolute -top-20 right-0 w-[400px] h-[400px] opacity-70">
           <img
             src={BoxesSvg}
@@ -70,40 +70,27 @@ const HeroHelp = () => {
           </div>
         </div>
 
-        {/* Curve SVG Transition */}
-        <div className="absolute -bottom-70 w-full">
+        {/* Curve SVG Transition - Fixed at bottom half of hero */}
+        <div className="absolute bottom-0 w-full lg:h-[70%] ">
           <img
             src={CurveSVG}
             alt="Curve Design"
-            className="w-full h-full object-cover"
+            className="w-full h-auto"
             style={{
-              transform: "scale(1.1)",
-              transformOrigin: "center",
+              transform: "scale(1)",
+              transformOrigin: "top center",
             }}
           />
         </div>
       </section>
 
-      {/* Curve SVG Transition */}
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
-        <img
-          src={CurveSVG}
-          alt="Curve Design"
-          className="w-full h-full object-cover"
-          style={{
-            transform: "scale(1.1)",
-            transformOrigin: "center",
-          }}
-        />
-      </div> */}
-
       {/* How We Help Section */}
-      <section className="relative  bg-white">
+      <section className="relative -mt-[100px] lg:-mt-[150px] xl:-mt-[50px] bg-transparent">
         {/* Content */}
         <div className="mx-auto px-4 md:px-20">
           <div className="grid md:grid-cols-2 gap-12 relative items-center">
             {/* Left Column */}
-            <div className=" flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4">
               <TitleText>HOW WE HELP</TitleText>
               <LargeTitleText>Searching Shouldn't Slow You Down</LargeTitleText>
               <RegularText>
@@ -127,9 +114,8 @@ const HeroHelp = () => {
               <img src={HappyPeople} alt="Team Meeting" className="w-full" />
             </div>
 
-            {/* Floadting avatars */}
-
-            <div className="flex absolute bottom-[30%] max-w-fit right-1/4 shadow-2xl  bg-white rounded-md px-8 py-4 items-center mt-8">
+            {/* Floating avatars */}
+            <div className="flex absolute bottom-[30%] max-w-fit right-1/4 shadow-2xl bg-white rounded-md px-8 py-4 items-center mt-8">
               <div className="flex -space-x-3">
                 <Avatar src="/images/avatar1.png" alt="Team member" />
                 <Avatar src="/images/avatar2.png" alt="Team member" />
@@ -143,6 +129,7 @@ const HeroHelp = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

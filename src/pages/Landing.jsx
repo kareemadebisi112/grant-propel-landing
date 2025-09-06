@@ -8,7 +8,7 @@ import PurposeContactFooter from "../sections/PurposeContactFooter";
 const Landing = () => {
   return (
     <LandingLayout>
-      <div className="gap-0 border-0 bg-dark-green">
+      <div className="gap-0 border-0">
         <Header />
         <HeroHelp />
         <DiscoverSection />
