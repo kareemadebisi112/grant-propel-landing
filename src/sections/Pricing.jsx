@@ -84,7 +84,7 @@ const PricingSection = () => {
           </div>
         </div>
 
-        <div className="grid font-poppins grid-cols-1 px-20 md:grid-cols-3 gap-4">
+        <div className="grid font-poppins grid-cols-1 md:px-20 lg:grid-cols-3 gap-4">
           {plans.map((plan, idx) => (
             <div
               key={idx}
