@@ -6,6 +6,7 @@ import LargeTitleText from "../components/LargeTitleText";
 import RegularText from "../components/RegularText";
 import MediumText from "../components/MediumText";
 import Eclipse from "../components/Eclipse";
+import { motion } from "framer-motion";
 
 const offer = [
   {
@@ -55,7 +56,13 @@ const whyDifferentCards = [
 ];
 
 const DiscoverSection = () => (
-  <section className="w-full bg-white z-10 relative py-16">
+  <motion.section
+    className="w-full bg-white z-10 relative py-16"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+  >
     <div className="p-4 md:p-8">
       {/* WHAT WE OFFER */}
 
@@ -68,15 +75,27 @@ const DiscoverSection = () => (
         }}
       >
         <div className="flex flex-col">
-          <div className=" flex flex-col space-y-4 items-center text-center">
+          <motion.div
+            className="flex flex-col space-y-4 items-center text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <TitleText>WHAT WE OFFER</TitleText>
 
             <LargeTitleText>A Smarter Way to Discover Funding</LargeTitleText>
 
             <RegularText>We don't just list grants. We:</RegularText>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:mt-10 md:grid-cols-2 gap-3 lg:gap-0 lg:grid-cols-4 mb-16">
+          <motion.div
+            className="grid grid-cols-1 md:mt-10 md:grid-cols-2 gap-3 lg:gap-0 lg:grid-cols-4 mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             {offer.map((item, index) => {
               let borderClass = "p-6 flex flex-col items-start text-start";
               // 1 column: border-bottom except last
@@ -96,7 +115,14 @@ const DiscoverSection = () => (
                 borderClass += " lg:border-r lg:border-border-gray";
               }
               return (
-                <div key={index} className={borderClass}>
+                <motion.div
+                  key={index}
+                  className={borderClass}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                >
                   <div className="w-[75px] h-[75px] mb-4">
                     <img
                       src={item.image}
@@ -107,27 +133,39 @@ const DiscoverSection = () => (
                   <p className="text-dark-green text-xl font-medium font-poppins">
                     {item.description}
                   </p>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </BorderRadiusCard>
 
       {/* WHO IT'S FOR */}
       <div className="py-20 px-4 md:px-10 lg:px-20">
         <div className="flex">
-          <div className="text-start flex space-y-4 flex-col mb-10">
+          <motion.div
+            className="text-start flex space-y-4 flex-col mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
             <TitleText>WHO IT'S FOR</TitleText>
             <LargeTitleText>Built for Builders</LargeTitleText>
             <RegularText className="max-w-xl">
               Whether you're growing a movement, launching a project, or funding
               your education — Grant Propel is made for you.
             </RegularText>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 space-y-10 mt-4 md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 space-y-10 mt-4 md:grid-cols-2 gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           {[
             {
               image: "/images/image1.jpg",
@@ -162,7 +200,14 @@ const DiscoverSection = () => (
               iconAlt: "Small Businesses",
             },
           ].map((card, idx) => (
-            <div key={card.title} className="h-fit overflow-hidden relative">
+            <motion.div
+              key={card.title}
+              className="h-fit overflow-hidden relative"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+            >
               <div className="relative aspect-[592/287]">
                 <svg
                   viewBox="0 0 592 287"
@@ -198,14 +243,20 @@ const DiscoverSection = () => (
                   {card.description}
                 </RegularText>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* WHY WE'RE DIFFERENT */}
       <BorderRadiusCard className=" bg-mid-green px-2 md:px-5 lg:px-10 py-20 ">
-        <div className="text-center flex space-y-4 flex-col mb-10">
+        <motion.div
+          className="text-center flex space-y-4 flex-col mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           <TitleText>WHY WE'RE DIFFERENT</TitleText>
 
           <LargeTitleText className="text-white">
@@ -216,12 +267,22 @@ const DiscoverSection = () => (
             Other tools hand you a search bar and wish you luck. We're
             different:
           </RegularText>
-        </div>
+        </motion.div>
 
-        <div className="grid px-2 md:px-5 lg:px-10  grid-cols-1 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid px-2 md:px-5 lg:px-10  grid-cols-1 lg:grid-cols-3 gap-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           {whyDifferentCards.map((item, idx) => (
-            <div
+            <motion.div
               key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 + idx * 0.15 }}
               className={
                 idx === 1
                   ? "p-5 border-3 border-dashed border-white/5 rounded-2xl flex flex-col items-center"
@@ -241,22 +302,42 @@ const DiscoverSection = () => (
                   {item.description}
                 </RegularText>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </BorderRadiusCard>
 
-      <div className="absolute z-[-1] top-[1100px] md:top-[700px] lg:top-[500px] w-[500px] flex justify-end h-[500px] right-0">
+      <motion.div
+        className="absolute z-[-1] top-[1100px] md:top-[700px] lg:top-[500px] w-[500px] flex justify-end h-[500px] right-0"
+        initial={{ opacity: 0, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
         <Eclipse />
-      </div>
+      </motion.div>
 
-      <div className="absolute z-[-1] bottom-[1300px] md:bottom-[1300px] lg:bottom-[500px] left-0 w-[500px] flex justify-start h-[500px]">
+      <motion.div
+        className="absolute z-[-1] bottom-[1300px] md:bottom-[1300px] lg:bottom-[500px] left-0 w-[500px] flex justify-start h-[500px]"
+        initial={{ opacity: 0, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
         <Eclipse className="rotate-90" />
-      </div>
+      </motion.div>
 
-      <div className="bg-light-gray absolute right-0 bottom-0 z-[-1] h-[700px] lg:h-[450px] w-full"></div>
+      <motion.div
+        className="bg-light-gray absolute right-0 bottom-0 z-[-1] h-[700px] lg:h-[450px] w-full"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      ></motion.div>
+
+      
     </div>
-  </section>
+  </motion.section>
 );
 
 export default DiscoverSection;
