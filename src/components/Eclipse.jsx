@@ -4,14 +4,14 @@ const Eclipse = ({ className = "", glow = false }) => {
   // Animation variants
   const normalVariant = {
     initial: {
-      opacity: 0.8,
-      scale: 0.98,
+      opacity: 0.85,
+      scale: 0.99,
     },
     animate: {
-      opacity: [0.8, 0.9, 0.8],
-      scale: [0.98, 1.02, 0.98],
+      opacity: [0.85, 0.9, 0.85],
+      scale: [0.99, 1.01, 0.99],
       transition: {
-        duration: 4,
+        duration: 2.5,
         repeat: Infinity,
         ease: "easeInOut",
       },
@@ -20,20 +20,20 @@ const Eclipse = ({ className = "", glow = false }) => {
 
   const glowVariant = {
     initial: {
-      opacity: 0.8,
-      scale: 0.98,
+      opacity: 0.85,
+      scale: 0.99,
       boxShadow: "0 0 0 rgba(0, 206, 103, 0.4)",
     },
     animate: {
-      opacity: [0.8, 1, 0.8],
-      scale: [0.98, 1.05, 0.98],
+      opacity: [0.85, 0.95, 0.85],
+      scale: [0.99, 1.03, 0.99],
       boxShadow: [
-        "0 0 10px rgba(0, 206, 103, 0.4)",
-        "0 0 20px rgba(0, 206, 103, 0.6)",
-        "0 0 10px rgba(0, 206, 103, 0.4)",
+        "0 0 5px rgba(0, 206, 103, 0.4)",
+        "0 0 12px rgba(0, 206, 103, 0.6)",
+        "0 0 5px rgba(0, 206, 103, 0.4)",
       ],
       transition: {
-        duration: 3,
+        duration: 2,
         repeat: Infinity,
         ease: "easeInOut",
       },

@@ -12,19 +12,19 @@ import { motion } from "motion/react";
 const HeroHelp = () => {
   return (
     <div className="w-full relative">
-      <section className="relative w-full h-[900px] flex bg-dark-green overflow-hidden">
+      <section className="relative w-full h-[1160px] flex bg-dark-green overflow-hidden">
         <motion.div
           className="absolute -top-20 right-0 w-[400px] h-[400px] opacity-70"
           initial={{ opacity: 0, rotate: -10 }}
           animate={{ opacity: 0.7, rotate: 0 }}
-          transition={{ duration: 1.5, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
           <motion.img
             src={BoxesSvg}
             alt="Boxes Pattern"
             className="w-[400px] h-[400px] text-light-green"
             transition={{
-              duration: 20,
+              duration: 10,
               ease: "linear",
               repeat: Infinity,
             }}
@@ -36,14 +36,14 @@ const HeroHelp = () => {
           style={{ top: "40%" }}
           initial={{ opacity: 0, rotate: 10 }}
           animate={{ opacity: 0.7, rotate: 0 }}
-          transition={{ duration: 1.5, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
         >
           <motion.img
             src={BoxesSvg}
             alt="Boxes Pattern"
             className="w-[400px] h-[400px] text-light-green"
             transition={{
-              duration: 25,
+              duration: 12,
               ease: "linear",
               repeat: Infinity,
             }}
@@ -55,7 +55,7 @@ const HeroHelp = () => {
           className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] lg:w-[600px] lg:h-[600px]"
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
         >
           <div className="relative w-full h-full rounded-full flex items-center justify-center">
             <motion.div
@@ -67,7 +67,7 @@ const HeroHelp = () => {
               }}
               animate={{ rotate: 360 }}
               transition={{
-                duration: 180,
+                duration: 60,
                 ease: "linear",
                 repeat: Infinity,
               }}
@@ -81,7 +81,7 @@ const HeroHelp = () => {
               }}
               animate={{ rotate: -360 }}
               transition={{
-                duration: 200,
+                duration: 70,
                 ease: "linear",
                 repeat: Infinity,
               }}
@@ -97,13 +97,13 @@ const HeroHelp = () => {
             className="max-w-3xl absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto text-center text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.3 }}
           >
             <motion.h1
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
+              transition={{ delay: 0.2, duration: 0.2 }}
             >
               Your Mission Deserves Momentum
             </motion.h1>
@@ -111,7 +111,7 @@ const HeroHelp = () => {
               className="text-base sm:text-lg md:text-xl mb-10 max-w-lg mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.8 }}
+              transition={{ delay: 0.3, duration: 0.2 }}
             >
               Whether you're driving change in your community, your field, or
               your future, Grant Propel helps you discover funding that fits —
@@ -120,9 +120,9 @@ const HeroHelp = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.1, duration: 0.5 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              transition={{ delay: 0.3, duration: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Button>Start Your Free Grant Discovery Trial</Button>
             </motion.div>
@@ -131,10 +131,10 @@ const HeroHelp = () => {
 
         {/* Curve SVG Transition - Fixed at bottom half of hero */}
         <motion.div
-          className="absolute bottom-0 w-full lg:h-[70%]"
-          initial={{ y: 100, opacity: 0 }}
+          className="absolute bottom-0 w-full xl:h-[70%] "
+          initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1.2 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
         >
           <img
             src={CurveSVG}
@@ -149,41 +149,41 @@ const HeroHelp = () => {
       </section>
 
       {/* How We Help Section */}
-      <section className="relative -mt-[100px] lg:-mt-[150px] xl:-mt-[50px] bg-transparent">
+      <section className="relative -mt-[100px] lg:-mt-[150px] xl:-mt-[100px] bg-transparent">
         {/* Content */}
         <div className="mx-auto px-4 md:px-20">
           <div className="grid md:grid-cols-2 gap-12 relative items-center">
             {/* Left Column */}
             <motion.div
               className="flex flex-col space-y-4"
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                transition={{ delay: 0.1, duration: 0.2 }}
               >
                 <TitleText>HOW WE HELP</TitleText>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.5 }}
+                transition={{ delay: 0.15, duration: 0.2 }}
               >
                 <LargeTitleText>
                   Searching Shouldn't Slow You Down
                 </LargeTitleText>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.6, duration: 0.5 }}
+                transition={{ delay: 0.2, duration: 0.2 }}
               >
                 <RegularText>
                   Finding the right grant shouldn't feel like chasing shadows.
@@ -194,20 +194,20 @@ const HeroHelp = () => {
                 </RegularText>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.8, duration: 0.5 }}
+                transition={{ delay: 0.25, duration: 0.2 }}
               >
                 <RegularText className="text-text-green italic font-semibold">
                   We're here to fix that.
                 </RegularText>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 1, duration: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.2 }}
               >
                 <RegularText>
                   Grant Propel brings clarity, focus, and momentum to your
@@ -220,30 +220,30 @@ const HeroHelp = () => {
             {/* Right Column */}
             <motion.div
               className="relative"
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.2 }}
             >
               <motion.img
                 src={HappyPeople}
                 alt="Team Meeting"
                 className="w-full"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.15 }}
               />
             </motion.div>
 
             {/* Floating avatars */}
             <motion.div
               className="flex absolute bottom-[30%] max-w-fit right-1/4 shadow-2xl bg-white rounded-md px-8 py-4 items-center mt-8"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.6 }}
+              transition={{ delay: 0.1, duration: 0.2 }}
               whileHover={{
-                y: -5,
-                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                y: -3,
+                boxShadow: "0 15px 30px -8px rgba(0, 0, 0, 0.2)",
               }}
             >
               <div className="flex -space-x-3">
@@ -253,8 +253,8 @@ const HeroHelp = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-                    whileHover={{ y: -3, zIndex: 10 }}
+                    transition={{ delay: 0.15 + index * 0.03, duration: 0.15 }}
+                    whileHover={{ y: -2, zIndex: 10 }}
                   >
                     <Avatar
                       src={`/images/avatar${num}.png`}
@@ -268,11 +268,12 @@ const HeroHelp = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 1.1, duration: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.15 }}
               >
                 More than 4000 people already joined
               </motion.span>
             </motion.div>
+            
           </div>
         </div>
       </section>

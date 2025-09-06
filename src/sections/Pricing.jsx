@@ -63,7 +63,7 @@ const PricingSection = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.2 }}
     >
       <div className="mx-auto">
         <motion.div
@@ -71,7 +71,7 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
         >
           <TitleText> PRICING</TitleText>
           <LargeTitleText className="max-w-[627px]">
@@ -84,7 +84,7 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.3, delay: 0.15 }}
         >
           <div className="bg-mid-green text-white rounded-full flex gap-2 p-1 shadow-inner">
             {["Monthly", "Annual"].map((type) => (
@@ -105,18 +105,18 @@ const PricingSection = () => {
 
         <motion.div
           className="grid font-poppins grid-cols-1 md:px-20 lg:grid-cols-3 gap-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
         >
           {plans.map((plan, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 + idx * 0.1 }}
+              transition={{ duration: 0.3, delay: 0.25 + idx * 0.1 }}
               className={`p-8 rounded-2xl shadow-sm flex flex-col justify-between ${
                 plan.border
                   ? "border-2 bg-transparent border-dashed border-mid-green/50"
@@ -156,9 +156,9 @@ const PricingSection = () => {
                 className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-full font-medium text-text-green transition ${
                   hoveredIdx === idx ? "bg-light-green text-white" : ""
                 }`}
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 onMouseEnter={() => setHoveredIdx(idx)}
                 onMouseLeave={() => setHoveredIdx(null)}
               >

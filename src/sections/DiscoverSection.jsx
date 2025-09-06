@@ -61,7 +61,7 @@ const DiscoverSection = () => (
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.6 }}
+    transition={{ duration: 0.3 }}
   >
     <div className="p-4 md:p-8">
       {/* WHAT WE OFFER */}
@@ -77,10 +77,10 @@ const DiscoverSection = () => (
         <div className="flex flex-col">
           <motion.div
             className="flex flex-col space-y-4 items-center text-center"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
             <TitleText>WHAT WE OFFER</TitleText>
 
@@ -94,7 +94,7 @@ const DiscoverSection = () => (
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.2, delay: 0.15 }}
           >
             {offer.map((item, index) => {
               let borderClass = "p-6 flex flex-col items-start text-start";
@@ -118,10 +118,10 @@ const DiscoverSection = () => (
                 <motion.div
                   key={index}
                   className={borderClass}
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 8 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                  transition={{ duration: 0.2, delay: 0.05 + index * 0.05 }}
                 >
                   <div className="w-[75px] h-[75px] mb-4">
                     <img
@@ -145,10 +145,10 @@ const DiscoverSection = () => (
         <div className="flex">
           <motion.div
             className="text-start flex space-y-4 flex-col mb-10"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.1 }}
           >
             <TitleText>WHO IT'S FOR</TitleText>
             <LargeTitleText>Built for Builders</LargeTitleText>
@@ -164,7 +164,7 @@ const DiscoverSection = () => (
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.15 }}
         >
           {[
             {
@@ -203,10 +203,10 @@ const DiscoverSection = () => (
             <motion.div
               key={card.title}
               className="h-fit overflow-hidden relative"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+              transition={{ duration: 0.2, delay: 0.1 + idx * 0.05 }}
             >
               <div className="relative aspect-[592/287]">
                 <svg
@@ -223,9 +223,10 @@ const DiscoverSection = () => (
                     </clipPath>
                   </defs>
                   <image
+                    className="object-cover "
                     href={card.image}
                     width="592"
-                    height="287"
+                    height="352"
                     clipPath={`url(#curve-clip-${idx})`}
                     preserveAspectRatio="none"
                   />
@@ -252,10 +253,10 @@ const DiscoverSection = () => (
       <BorderRadiusCard className=" bg-mid-green px-2 md:px-5 lg:px-10 py-20 ">
         <motion.div
           className="text-center flex space-y-4 flex-col mb-10"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.2, delay: 0.1 }}
         >
           <TitleText>WHY WE'RE DIFFERENT</TitleText>
 
@@ -274,15 +275,15 @@ const DiscoverSection = () => (
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.2, delay: 0.15 }}
         >
           {whyDifferentCards.map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 + idx * 0.15 }}
+              transition={{ duration: 0.2, delay: 0.1 + idx * 0.05 }}
               className={
                 idx === 1
                   ? "p-5 border-3 border-dashed border-white/5 rounded-2xl flex flex-col items-center"
@@ -309,20 +310,20 @@ const DiscoverSection = () => (
 
       <motion.div
         className="absolute z-[-1] top-[1100px] md:top-[700px] lg:top-[500px] w-[500px] flex justify-end h-[500px] right-0"
-        initial={{ opacity: 0, scale: 1 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.3 }}
       >
         <Eclipse />
       </motion.div>
 
       <motion.div
         className="absolute z-[-1] bottom-[1300px] md:bottom-[1300px] lg:bottom-[500px] left-0 w-[500px] flex justify-start h-[500px]"
-        initial={{ opacity: 0, scale: 1 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.3 }}
+        transition={{ duration: 0.3 }}
       >
         <Eclipse className="rotate-90" />
       </motion.div>
@@ -332,10 +333,8 @@ const DiscoverSection = () => (
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.2 }}
       ></motion.div>
-
-      
     </div>
   </motion.section>
 );

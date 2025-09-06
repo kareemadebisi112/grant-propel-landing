@@ -15,45 +15,45 @@ const PurposeContactFooter = () => {
       className="relative bg-white z-10 w-full overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.2 }}
     >
-      {/* Only keep the boxes background, remove the absolute curve */}
+      {/* Only keep the boxes background */}
       <motion.div
         className="absolute top-0 pointer-events-none right-0 w-full h-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
       >
         <motion.img
           src={boxes}
           alt="Boxes Pattern"
           className="w-[300px] absolute right-0 lg:right-[100px] top-3/6 h-[300px] text-light-green"
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
         />
       </motion.div>
 
       {/* Purpose Section */}
       <motion.div
         className="relative z-10 pt-28 px-4 md:px-16 lg:px-36 mx-auto"
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.3 }}
       >
         <motion.div
           className="flex justify-center text-center space-y-2 items-center flex-col"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.15 }}
           >
             <TitleText>OUR PURPOSE</TitleText>
           </motion.div>
@@ -61,7 +61,7 @@ const PurposeContactFooter = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <LargeTitleText className="max-w-[748px]">
               Doors Shouldn't Be Closed to People Doing the Work
@@ -75,7 +75,7 @@ const PurposeContactFooter = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.3, delay: 0.25 }}
         >
           <RegularText>
             Grant Propel was created to change who gets seen, supported, and
@@ -95,7 +95,7 @@ const PurposeContactFooter = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.3 }}
       >
         {/* Curve as part of contact section */}
         <div className="relative h-fit">
@@ -106,16 +106,16 @@ const PurposeContactFooter = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           />
 
           {/* Contact content positioned over the curve */}
           <motion.div
             className="lg:absolute -mt-[100px] lg:mt-0 bg-dark-green lg:bg-transparent min-h-fit left-0 top-[40%] sm:top-[45%] md:top-[50%] lg:top-[55%] w-full"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <div className="px-4 md:px-16 lg:px-36 mx-auto">
               <motion.div
@@ -123,7 +123,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.3, delay: 0.25 }}
               >
                 <TitleText className="text-light-green">CONTACT</TitleText>
               </motion.div>
@@ -132,7 +132,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
               >
                 <LargeTitleText className="text-white text-3xl md:text-4xl">
                   Let's Get You Funded
@@ -143,7 +143,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.7 }}
+                transition={{ duration: 0.3, delay: 0.35 }}
               >
                 <RegularText className="text-white">
                   Start your free trial and get matched with real opportunities
@@ -155,7 +155,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.8 }}
+                transition={{ duration: 0.3, delay: 0.4 }}
               >
                 <Button>Start Your Free Trial</Button>
               </motion.div>
@@ -170,14 +170,14 @@ const PurposeContactFooter = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.3 }}
       >
         <motion.div
           className="max-w-7xl px-6 py-6 rounded-2xl bg-white/5 flex align-middle items-center w-full mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
         >
           <div className="flex w-full flex-col lg:flex-row justify-between align-middle items-center">
             <motion.div
@@ -185,7 +185,7 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
             >
               <img src={fullLogo} alt="Grant Propel Logo" className="h-8" />
             </motion.div>
@@ -194,43 +194,43 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
             >
               <motion.a
-                whileHover={{ scale: 1.05, color: "#00A389" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileHover={{ scale: 1.02, color: "#00A389" }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Home
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05, color: "#00A389" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileHover={{ scale: 1.02, color: "#00A389" }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 About Us
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05, color: "#00A389" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileHover={{ scale: 1.02, color: "#00A389" }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Features
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05, color: "#00A389" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileHover={{ scale: 1.02, color: "#00A389" }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Testimonials
               </motion.a>
               <motion.a
-                whileHover={{ scale: 1.05, color: "#00A389" }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                whileHover={{ scale: 1.02, color: "#00A389" }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
@@ -242,16 +242,16 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.3, delay: 0.25 }}
             >
               <motion.a
                 whileHover={{
-                  scale: 1.1,
+                  scale: 1.05,
                   backgroundColor: "#00A389",
                   color: "#fff",
                   borderColor: "#00A389",
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
@@ -259,12 +259,12 @@ const PurposeContactFooter = () => {
               </motion.a>
               <motion.a
                 whileHover={{
-                  scale: 1.1,
+                  scale: 1.05,
                   backgroundColor: "#00A389",
                   color: "#fff",
                   borderColor: "#00A389",
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
@@ -272,12 +272,12 @@ const PurposeContactFooter = () => {
               </motion.a>
               <motion.a
                 whileHover={{
-                  scale: 1.1,
+                  scale: 1.05,
                   backgroundColor: "#00A389",
                   color: "#fff",
                   borderColor: "#00A389",
                 }}
-                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
@@ -292,7 +292,7 @@ const PurposeContactFooter = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.3 }}
         >
           <RegularText className="text-center text-[16px] text-sm text-white w-full">
             All Rights Reserved by Grant Propel. © {new Date().getFullYear()}
