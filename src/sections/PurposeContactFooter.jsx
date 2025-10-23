@@ -15,14 +15,14 @@ const PurposeContactFooter = () => {
       className="relative bg-white z-10 w-full overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0 }}
     >
       {/* Only keep the boxes background */}
       <motion.div
         className="absolute top-0 pointer-events-none right-0 w-full h-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.1 }}
+        transition={{ duration: 0, delay: 0 }}
       >
         <motion.img
           src={boxes}
@@ -30,7 +30,7 @@ const PurposeContactFooter = () => {
           className="w-[300px] absolute right-0 lg:right-[100px] top-3/6 h-[300px] text-light-green"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4, delay: 0.2 }}
+          transition={{ duration: 0, delay: 0 }}
         />
       </motion.div>
 
@@ -40,20 +40,20 @@ const PurposeContactFooter = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0 }}
       >
         <motion.div
           className="flex justify-center text-center space-y-2 items-center flex-col"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.15 }}
+            transition={{ duration: 0, delay: 0 }}
           >
             <TitleText>OUR PURPOSE</TitleText>
           </motion.div>
@@ -61,7 +61,7 @@ const PurposeContactFooter = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0, delay: 0 }}
           >
             <LargeTitleText className="max-w-[748px]">
               Doors Shouldn't Be Closed to People Doing the Work
@@ -75,7 +75,7 @@ const PurposeContactFooter = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.25 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <RegularText>
             Grant Propel was created to change who gets seen, supported, and
@@ -95,7 +95,7 @@ const PurposeContactFooter = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0 }}
       >
         {/* Curve as part of contact section */}
         <div className="relative h-fit">
@@ -106,7 +106,7 @@ const PurposeContactFooter = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.1 }}
+            transition={{ duration: 0, delay: 0 }}
           />
 
           {/* Contact content positioned over the curve */}
@@ -115,7 +115,7 @@ const PurposeContactFooter = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.2 }}
+            transition={{ duration: 0, delay: 0 }}
           >
             <div className="px-4 md:px-16 lg:px-36 mx-auto">
               <motion.div
@@ -123,7 +123,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.25 }}
+                transition={{ duration: 0, delay: 0 }}
               >
                 <TitleText className="text-light-green">CONTACT</TitleText>
               </motion.div>
@@ -132,7 +132,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.3 }}
+                transition={{ duration: 0, delay: 0 }}
               >
                 <LargeTitleText className="text-white text-3xl md:text-4xl">
                   Let's Get You Funded
@@ -143,7 +143,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.35 }}
+                transition={{ duration: 0, delay: 0 }}
               >
                 <RegularText className="text-white">
                   Start your free trial and get matched with real opportunities
@@ -155,7 +155,7 @@ const PurposeContactFooter = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.4 }}
+                transition={{ duration: 0, delay: 0 }}
               >
                 <Button>Start Your Free Trial</Button>
               </motion.div>
@@ -170,14 +170,14 @@ const PurposeContactFooter = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0 }}
       >
         <motion.div
           className="max-w-7xl px-6 py-6 rounded-2xl bg-white/5 flex align-middle items-center w-full mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.1 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <div className="flex w-full flex-col lg:flex-row justify-between align-middle items-center">
             <motion.div
@@ -185,7 +185,7 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.15 }}
+              transition={{ duration: 0, delay: 0 }}
             >
               <img src={fullLogo} alt="Grant Propel Logo" className="h-8" />
             </motion.div>
@@ -194,12 +194,12 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.2 }}
+              transition={{ duration: 0, delay: 0 }}
             >
               <motion.a
                 whileHover={{ scale: 1.02, color: "#00A389" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="#home"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Home
@@ -207,7 +207,7 @@ const PurposeContactFooter = () => {
               <motion.a
                 whileHover={{ scale: 1.02, color: "#00A389" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="#about"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 About Us
@@ -215,23 +215,23 @@ const PurposeContactFooter = () => {
               <motion.a
                 whileHover={{ scale: 1.02, color: "#00A389" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="#features"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Features
               </motion.a>
-              <motion.a
+              {/* <motion.a
                 whileHover={{ scale: 1.02, color: "#00A389" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
                 href="#"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Testimonials
-              </motion.a>
+              </motion.a> */}
               <motion.a
                 whileHover={{ scale: 1.02, color: "#00A389" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="#pricing"
                 className="text-white hover:text-light-green transition duration-200"
               >
                 Pricing
@@ -242,7 +242,7 @@ const PurposeContactFooter = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.25 }}
+              transition={{ duration: 0, delay: 0 }}
             >
               <motion.a
                 whileHover={{
@@ -252,7 +252,9 @@ const PurposeContactFooter = () => {
                   borderColor: "#00A389",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="https://www.facebook.com/share/19wfryaMkB/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
                 <FaFacebookF />
@@ -265,7 +267,9 @@ const PurposeContactFooter = () => {
                   borderColor: "#00A389",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="https://www.instagram.com/grantpropel?igsh=MWxkOWRscTU2MWk5Ng%3D%3D&utm_source=qr"
+                target="_blank"
+                  rel="noopener noreferrer"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
                 <FaInstagram />
@@ -278,7 +282,9 @@ const PurposeContactFooter = () => {
                   borderColor: "#00A389",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                href="#"
+                href="https://www.linkedin.com/company/grant-propel/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white border border-white/10 p-3 rounded-full hover:text-light-green transition duration-200"
               >
                 <FaLinkedinIn />
@@ -292,7 +298,7 @@ const PurposeContactFooter = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: 0.3 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <RegularText className="text-center text-[16px] text-sm text-white w-full">
             All Rights Reserved by Grant Propel. © {new Date().getFullYear()}

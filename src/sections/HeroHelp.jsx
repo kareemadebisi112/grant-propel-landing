@@ -12,19 +12,19 @@ import { motion } from "motion/react";
 const HeroHelp = () => {
   return (
     <div className="w-full relative">
-      <section className="relative w-full h-[1160px] flex bg-dark-green overflow-hidden">
+      <section className="relative w-full h-[1160px] flex bg-dark-green overflow-hidden" id="home">
         <motion.div
           className="absolute -top-20 right-0 w-[400px] h-[400px] opacity-70"
           initial={{ opacity: 0, rotate: -10 }}
           animate={{ opacity: 0.7, rotate: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <motion.img
             src={BoxesSvg}
             alt="Boxes Pattern"
             className="w-[400px] h-[400px] text-light-green"
             transition={{
-              duration: 10,
+              duration: 0,
               ease: "linear",
               repeat: Infinity,
             }}
@@ -36,7 +36,7 @@ const HeroHelp = () => {
           style={{ top: "40%" }}
           initial={{ opacity: 0, rotate: 10 }}
           animate={{ opacity: 0.7, rotate: 0 }}
-          transition={{ duration: 0.4, delay: 0.1 }}
+          transition={{ duration: 0, delay: 0 }}
         >
           <motion.img
             src={BoxesSvg}
@@ -159,13 +159,13 @@ const HeroHelp = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0 }}
             >
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.1, duration: 0.2 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 <TitleText>HOW WE HELP</TitleText>
               </motion.div>
@@ -173,7 +173,7 @@ const HeroHelp = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.15, duration: 0.2 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 <LargeTitleText>
                   Searching Shouldn't Slow You Down
@@ -183,7 +183,7 @@ const HeroHelp = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2, duration: 0.2 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 <RegularText>
                   Finding the right grant shouldn't feel like chasing shadows.
@@ -197,7 +197,7 @@ const HeroHelp = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.25, duration: 0.2 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 <RegularText className="text-text-green italic font-semibold">
                   We're here to fix that.
@@ -207,7 +207,7 @@ const HeroHelp = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.2 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 <RegularText>
                   Grant Propel brings clarity, focus, and momentum to your
@@ -223,14 +223,14 @@ const HeroHelp = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0 }}
             >
               <motion.img
                 src={HappyPeople}
                 alt="Team Meeting"
                 className="w-full"
                 whileHover={{ scale: 1.01 }}
-                transition={{ duration: 0.15 }}
+                transition={{ duration: 0 }}
               />
             </motion.div>
 
@@ -240,7 +240,7 @@ const HeroHelp = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.2 }}
+              transition={{ delay: 0, duration: 0 }}
               whileHover={{
                 y: -3,
                 boxShadow: "0 15px 30px -8px rgba(0, 0, 0, 0.2)",
@@ -253,7 +253,7 @@ const HeroHelp = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.15 + index * 0.03, duration: 0.15 }}
+                    transition={{ delay: 0, duration: 0 }}
                     whileHover={{ y: -2, zIndex: 10 }}
                   >
                     <Avatar
@@ -268,7 +268,7 @@ const HeroHelp = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.15 }}
+                transition={{ delay: 0, duration: 0 }}
               >
                 More than 4000 people already joined
               </motion.span>

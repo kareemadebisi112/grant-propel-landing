@@ -60,6 +60,7 @@ const PricingSection = () => {
   return (
     <motion.section
       className="bg-light-gray pb-16 px-2"
+      id="pricing"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
