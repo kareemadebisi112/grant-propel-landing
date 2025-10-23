@@ -197,13 +197,9 @@ const DiscoverSection = () => (
               iconAlt: "Small Businesses",
             },
           ].map((card, idx) => (
-            <motion.div
+            <div
               key={card.title}
               className="h-fit overflow-hidden relative"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0, delay: 0 }}
             >
               <div className="relative aspect-[592/287]">
                 <svg
@@ -241,7 +237,7 @@ const DiscoverSection = () => (
                   {card.description}
                 </RegularText>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
