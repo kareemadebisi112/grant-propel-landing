@@ -1,0 +1,24 @@
+{
+  "name": "grant-propel-landing",
+  "version": "1.0.0",
+  "description": "Grant Propel landing page, built with Eleventy.",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kareemadebisi112/grant-propel-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kareemadebisi112/grant-propel-landing/issues"
+  },
+  "homepage": "https://github.com/kareemadebisi112/grant-propel-landing#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
