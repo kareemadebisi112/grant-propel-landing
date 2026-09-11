@@ -100,6 +100,12 @@
         formContent.style.display = 'none';
         successState.style.display = 'block';
         setFormStatus('You are on the waitlist.', 'success');
+
+        if (window.AhrefsAnalytics != null) {
+          window.AhrefsAnalytics.sendEvent('waitlist_signup', {
+            props: { org_type: orgType.value }
+          });
+        }
         return;
       }
 
@@ -131,6 +137,12 @@
       formContent.style.display = 'none';
       successState.style.display = 'block';
       setFormStatus(payload && payload.message ? payload.message : 'You are on the waitlist.', 'success');
+
+      if (window.AhrefsAnalytics != null) {
+        window.AhrefsAnalytics.sendEvent('waitlist_signup', {
+          props: { org_type: orgType.value }
+        });
+      }
     } catch (error) {
       setFormStatus(error.message || 'Something went wrong. Please try again.', 'error');
     } finally {
